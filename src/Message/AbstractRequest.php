@@ -255,4 +255,28 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
                 return null;
         }
     }
+  
+    /**
+     * Get the SSL key.
+     *
+     * @return string ssl key
+     */
+    public function getEmail()
+    {
+        return $this->getParameter('email');
+    }
+
+    /**
+     * Set the SSL key.
+     *
+     * @param string $value ssl key
+     *
+     * @return self
+     */
+    public function setEmail($value)
+    {
+        return $this->setParameter('email', $value);
+    }
+    
+    
 }
