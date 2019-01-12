@@ -59,6 +59,7 @@ class PurchaseRequest extends AbstractRequest
 
         return array(
             'LMI_PAYEE_PURSE'         => $this->getMerchantPurse(),
+            'LMI_PAYMER_EMAIL'         => $this->getEmail(),
             'LMI_PAYMENT_AMOUNT'      => $this->getAmount(),
             'LMI_PAYMENT_NO'          => $this->getTransactionId(),
             'LMI_PAYMENT_DESC_BASE64' => base64_encode($this->getDescription()),
@@ -68,7 +69,8 @@ class PurchaseRequest extends AbstractRequest
             'LMI_SUCCESS_METHOD'      => $this->getReturnMethod(),
             'LMI_FAIL_URL'            => $this->getCancelUrl(),
             'LMI_FAIL_METHOD'         => $this->getCancelMethod(),
-            'LMI_HOLD'                => $this->getHold()
+            'LMI_HOLD'                => $this->getHold(),
+            'LMI_HIDE_DISABLED'       => 1
         );
     }
 
