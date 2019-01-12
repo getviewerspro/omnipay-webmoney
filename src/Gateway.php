@@ -179,6 +179,28 @@ class Gateway extends AbstractGateway
     {
         return $this->setParameter('sslKey', $value);
     }
+    
+    /**
+     * Get the email.
+     *
+     * @return string email
+     */
+    public function getEmail()
+    {
+        return $this->getParameter('email');
+    }
+    
+    /**
+     * Set the email.
+     *
+     * @param string $value email
+     *
+     * @return self
+     */
+    public function setEmail($value)
+    {
+        return $this->setParameter('email', $value);
+    }
 
     /**
      * @param array $parameters
