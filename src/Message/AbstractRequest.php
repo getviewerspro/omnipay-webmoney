@@ -257,9 +257,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
   
     /**
-     * Get the SSL key.
+     * Get the email.
      *
-     * @return string ssl key
+     * @return string email
      */
     public function getEmail()
     {
@@ -267,9 +267,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     }
 
     /**
-     * Set the SSL key.
+     * Set the email.
      *
-     * @param string $value ssl key
+     * @param string $value email
      *
      * @return self
      */
