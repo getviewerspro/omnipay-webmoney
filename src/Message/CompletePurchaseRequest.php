@@ -24,6 +24,7 @@ class CompletePurchaseRequest extends AbstractRequest
         );
 
         return array(
+            'LMI_PREREQUEST' => $this->httpRequest->request->get('LMI_PREREQUEST'),
             'LMI_PAYEE_PURSE' => $this->httpRequest->request->get('LMI_PAYEE_PURSE'),
             'LMI_PAYMENT_AMOUNT' => $this->httpRequest->request->get('LMI_PAYMENT_AMOUNT'),
             'LMI_PAYMENT_NO' => $this->httpRequest->request->get('LMI_PAYMENT_NO'),
