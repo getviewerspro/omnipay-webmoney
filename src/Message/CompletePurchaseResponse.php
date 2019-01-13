@@ -21,12 +21,12 @@ class CompletePurchaseResponse extends AbstractResponse
         $this->request = $request;
         $this->data = $data;
 
-        if ($this->getHash() !== $this->calculateHash()) {
-            throw new InvalidResponseException('Invalid hash');
-        }
-        
         if (isset($this->data['LMI_PREREQUEST'])) {
             return 'YES'; exit;
+        }
+        
+        if ($this->getHash() !== $this->calculateHash()) {
+            throw new InvalidResponseException('Invalid hash');
         }
 
         if ($this->request->getTestMode() !== $this->getTestMode()) {
