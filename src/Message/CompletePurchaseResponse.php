@@ -22,7 +22,11 @@ class CompletePurchaseResponse extends AbstractResponse
         $this->data = $data;
 
         if (isset($this->data['LMI_PREREQUEST'])) {
+            Log::debug('YES'); 
             return 'YES'; exit;
+        } else {
+            Log::debug('Data: '.serialize($this->data)); 
+            Log::debug('Request: '.serialize($request->all()));  
         }
         
         if ($this->getHash() !== $this->calculateHash()) {
