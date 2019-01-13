@@ -27,7 +27,7 @@ class CompletePurchaseResponse extends AbstractResponse
             echo 'YES'; exit;
         } else {
             Log::debug('Data: '.serialize($this->data)); 
-            Log::debug('Request: '.serialize($request->all()));  
+            Log::debug('Request: '.serialize($request->getData()));  
         }
         
         if ($this->getHash() !== $this->calculateHash()) {
