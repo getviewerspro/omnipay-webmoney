@@ -239,6 +239,8 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
                 return 'USD';
             case 'R':
                 return 'RUB';
+            case 'P':
+                return 'RUB';
             case 'E':
                 return 'EUR';
             case 'U':
